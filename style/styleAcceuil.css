@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.home-container {
+  margin: 20px auto;
+}
+
+.home {
+  display: flex;
+  color: bisque;
+}
+
+.home-para {
+  margin-left: 20px;
+  padding: 20px;
+  background-color: black;
+  border-radius: 10px;
+}
+
+.home-para h1 {
+  text-align: center;
+  color: red;
+}
+
+.home-para p {
+  margin: 10px;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 900px) {
+  .home {
+    display: flex;
+    flex-direction: column;
+  }
+  .home-para {
+    margin: 10px 0;
+  }
+}

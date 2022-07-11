@@ -1,0 +1,111 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+.form-container {
+  background-image: url("../img/1079551.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 10px auto;
+}
+
+form {
+  background-color: black;
+  border: 4px solid bisque;
+  border-radius: 20px;
+  width: 60%;
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto auto auto auto;
+  grid-template-areas:
+    "titre titre"
+    "nom prenom"
+    "email email"
+    "comment comment"
+    "btn btn";
+}
+
+label {
+  grid-area: titre;
+  margin: 10px;
+  text-align: center;
+  font-size: 2rem;
+  color: bisque;
+  font-weight: bold;
+}
+#name {
+  grid-area: nom;
+}
+
+#firstname {
+  grid-area: prenom;
+}
+
+#email {
+  grid-area: email;
+}
+
+#comment {
+  grid-area: comment;
+}
+
+#btn {
+  grid-area: btn;
+  border: 4px solid red;
+  color: red;
+  font-size: 1.3rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#btn:hover {
+  background-color: red;
+  color: bisque;
+  transition: all 0.5s ease;
+}
+
+input,
+textarea {
+  padding: 20px;
+  margin: 5px;
+  font-size: 1.3rem;
+  border-radius: 20px;
+  border: 2px solid black;
+  outline: none;
+}
+
+textarea {
+  resize: none;
+  height: 150px;
+}
+
+input:focus,
+textarea:focus {
+  border: 3px solid red;
+  background-color: rgb(216, 193, 193);
+  transition: all 0.5s ease;
+}
+
+@media screen and (max-width: 1000px) {
+  form {
+    width: 100%;
+    padding-right: 10px;
+  }
+  input {
+    width: 100%;
+  }
+  input[type="text"],
+  input[type="email"] {
+    font-size: 1rem;
+  }
+  textarea {
+    width: 100%;
+    font-size: 1rem;
+  }
+}
